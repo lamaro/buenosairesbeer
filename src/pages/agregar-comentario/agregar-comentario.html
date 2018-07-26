@@ -1,0 +1,43 @@
+<ion-header>
+ <ion-toolbar transparent>
+  <ion-title></ion-title>
+  <ion-buttons end>
+    <button ion-button icon-only (click)="close()"><ion-icon name="close"></ion-icon></button>
+  </ion-buttons>
+ </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list no-lines>
+
+    <ion-item>
+      <ion-label floating>Tu nombre</ion-label>
+      <ion-input [(ngModel)]="nombreUsuario" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Tu Review</ion-label>
+      <ion-textarea [(ngModel)]="comentarioUsuario"></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+       <ion-label floating>Puntaje Bebida</ion-label>
+      <ion-range min="0" max="10" pin="true" [(ngModel)]="puntajeBebidaUsuario">
+        <ion-icon range-left name="sad"></ion-icon>
+        <ion-icon range-right name="happy"></ion-icon>
+      </ion-range>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Puntaje Comida</ion-label>
+      <ion-range min="0" max="10" pin="true" [(ngModel)]="puntajeComidaUsuario">
+        <ion-icon range-left name="sad"></ion-icon>
+        <ion-icon range-right name="happy"></ion-icon>
+      </ion-range>
+    </ion-item>
+
+  </ion-list>
+
+  <button ion-button full color="secondary" (click)="save()">Enviar comentario</button>
+
+</ion-content>

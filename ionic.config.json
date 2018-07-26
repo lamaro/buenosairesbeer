@@ -1,8 +1,8 @@
 {
   "name": "buenosairesbeer",
-  "app_id": "47d4d1eb",
-  "type": "ionic-angular",
   "integrations": {
     "cordova": {}
-  }
+  },
+  "type": "ionic-angular",
+  "pro_id": "47d4d1eb"
 }

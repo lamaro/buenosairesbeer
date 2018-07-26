@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Buenos Aires Beer</ion-title>
+    <ion-buttons end>
+    <button ion-button icon-only (click)="close()"><ion-icon name="close"></ion-icon></button>
+  </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <img [src]="cerveceria.urlImagenCer" [alt]="cerveceria.nombreCer">
+
+  <h1>{{ cerveceria.nombreCer }}</h1>
+  <p>{{ cerveceria.ubicacionCer }}</p>
+  <ul>
+   <li>Puntaje Bebida:
+     <ion-icon *ngIf="cerveceria.promBebCer < 5" danger name="sad"></ion-icon>
+     <ion-icon *ngIf="cerveceria.promBebCer >= 5" secondary name="happy"></ion-icon>
+     {{ cerveceria.promBebCer | number : '1.1-1' }}
+   </li>
+   <li>Puntaje Bebida:
+     <ion-icon *ngIf="cerveceria.promBebCer < 5" danger name="sad"></ion-icon>
+     <ion-icon *ngIf="cerveceria.promBebCer >= 5" secondary name="happy"></ion-icon>
+     {{ cerveceria.promComCer | number : '1.1-1' }}
+   </li>
+</ul>
+
+<ion-buttons end>
+    <button ion-button icon-only (click)="agregarComentario(cerveceria)"><ion-icon name="add"></ion-icon></button>
+  </ion-buttons>
+</ion-content>
