@@ -30,8 +30,8 @@ export class CerveceriasProvider {
   agregarComentario(review,cerveceria){ //INCOMPLETO!!!!!!
     this.http.put('https://buenosairesbeer-api-rest.herokuapp.com/cerveceria/comentario/add/' + cerveceria._id, cerveceria)
     .map( (resp: any) => {
-      this.cerveceria = resp;
-      return this.cerveceria;
+    //  this.cerveceria = resp;
+      //return this.cerveceria;
 
   });
 }
