@@ -12,6 +12,9 @@ import { CerveceriaPage } from '../pages/cerveceria/cerveceria';
 import { AgregarComentarioPage } from '../pages/agregar-comentario/agregar-comentario';
 //Providers
 import { CerveceriasProvider } from '../providers/cervecerias/cervecerias';
+//Plugins
+import { Geolocation } from '@ionic-native/geolocation';
+
 
 @NgModule({
   declarations: [
@@ -37,8 +40,9 @@ import { CerveceriasProvider } from '../providers/cervecerias/cervecerias';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
-    CerveceriasProvider
+    CerveceriasProvider,
+    Geolocation,
+    {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
 export class AppModule {}

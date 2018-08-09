@@ -4,10 +4,11 @@ import { CerveceriaPage } from './cerveceria';
 
 @NgModule({
   declarations: [
-    CerveceriaPage,
+    //CerveceriaPage,
   ],
   imports: [
     IonicPageModule.forChild(CerveceriaPage),
   ],
+  
 })
 export class CerveceriaPageModule {}

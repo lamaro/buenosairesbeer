@@ -4,10 +4,11 @@ import { AgregarComentarioPage } from './agregar-comentario';
 
 @NgModule({
   declarations: [
-    AgregarComentarioPage,
+    //AgregarComentarioPage,
   ],
   imports: [
     IonicPageModule.forChild(AgregarComentarioPage),
   ],
+  
 })
 export class AgregarComentarioPageModule {}
